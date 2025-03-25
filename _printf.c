@@ -33,7 +33,7 @@ int _printf(const char *format, ...)
 
 	va_start(arguments, format); /* Macro initializing argument list iteration */
 	if (format == NULL)
-		exit(98);
+		return (-1);
 	for (index = 0; format[index] != '\0'; index++)
 	{								/* Going through format string */
 		if (format[index] != '%')
