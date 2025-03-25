@@ -1,6 +1,6 @@
-.TH _PRINTF 3 "March 2025" "1.0" "Custom Library"
+.TH _PRINTF "1" "2025-03-25" "1.0" "Custom Library"
 .SH NAME
-_printf \- custom formatted output conversion
+_printf \- print data and format
 
 
 .SH SYNOPSIS
@@ -11,7 +11,6 @@ _printf \- custom formatted output conversion
 .B #include <stdlib.h>
 .br
 .B #include <unistd.h>
-.br
 .PP
 .BI "int _printf(const char *" format ", ...);"
 .br
@@ -28,18 +27,25 @@ _printf \- custom formatted output conversion
 .BI "char *rev_string(char *" number_str ", int " length ");"
 .br
 .BI "int _print_digit(va_list " arguments ");"
-.br
 
 .SH DESCRIPTION
-A custom version of printf. Produce ouput refering to a format string. This format string specifies how are converted the different arguments for output.
+A custom version of printf. Produce ouput refering to a format string.
 .br
-The  format  string  is a character string composed of zero or more directives: ordinary characters (not %), which are copied unchanged to the output stream;
+This format string specifies how are converted
 .br
-and conversion specifications, each of which results in fetching zero or more subsequent arguments.
+the different arguments for output.
 .br
-Each conversion specification is introduced by the character %, and ends with a conversion specifier.
+The  format  string  is a character string composed of zero or more directives:
+.br
+ordinary characters (not %), which are copied unchanged to the output stream;
+.br
+and conversion specifications, each of which results in fetching zero
+.br
+or more subsequent arguments. Each conversion specification is introduced
+.br
+by the character %, and ends with a conversion specifier.
 .PP
-This custom implementation of printf supports the following conversion specifiers:
+This custom version of printf supports the following conversion specifiers:
 .IP \[bu] 2
 .B %d
 and
@@ -56,7 +62,11 @@ and
 - Prints a percent sign ('%').
 
 .SH RETURN VALUE
-Upon success, returns the number of characters printed (excluding the null byte used to end output to strings). If an output error is encountered, a negative value is returned.
+Upon success, returns the number of characters printed (excluding the null byte
+.br
+used to end output to strings). If an output error is encountered,
+.br
+a negative value is returned.
 
 .SH EXAMPLES
 .nf

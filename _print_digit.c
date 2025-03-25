@@ -79,7 +79,7 @@ int _print_digit(va_list arguments)
 		free(number_str);
 		return (count);
 	}
-	if (digit < 0)
+	if (digit < 0) /* Handling negative numbers */
 	{
 		is_negative = 1;
 		digit = -digit; /* Remove the '-' symbol to put digits in a string */
