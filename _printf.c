@@ -46,7 +46,7 @@ int _printf(const char *format, ...)
 		if (format[index] == '\0')
 		{
 			va_end(arguments);
-			return (-1);
+			return (bytes_count);
 		}
 		else if (format[index] == 'c')
 			bytes_count += _print_char(arguments);
