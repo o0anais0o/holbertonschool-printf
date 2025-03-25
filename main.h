@@ -7,9 +7,11 @@
 int _printf(const char *format, ...);
 int _print_string(va_list arguments);
 int _print_char(va_list arguments);
+int _print_percent(void);
 int _putchar(char c);
 int egde_check(int digit);
 char *rev_string(char *number_str, int length);
 int _print_digit(va_list arguments);
+int _print_other(char c);
 
 #endif
