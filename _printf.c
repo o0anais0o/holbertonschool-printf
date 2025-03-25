@@ -43,26 +43,26 @@ int _printf(const char *format, ...)
 			continue; /* Go back to the loop to check the next character */
 		}
 		index++; /* Checking the next character after "%" */
-		if (format[index] == 'c')
+		if (format[index] == '\0')
+		{
+			va_end(arguments);
+			return (-1);
+		}
+		else if (format[index] == 'c')
 			bytes_count += _print_char(arguments);
 
 		else if (format[index] == 's')
 			bytes_count += _print_string(arguments);
 
 		else if (format[index] == '%')
-		{
-			_putchar('%'); /* Write "%" */
-			bytes_count++;
-		}
+			bytes_count += _print_percent();
+
 		else if (format[index] == 'd' || format[index] == 'i')
 			bytes_count += _print_digit(arguments);
 
-		else
-		{ /* Handeling other conversion specifier */
-			_putchar('%');
-			_putchar(format[index]);
-			bytes_count += 2;
-		}
+		else /* Handeling other conversion specifier */
+			bytes_count += _print_other(format[index]);
+
 	}
 	va_end(arguments); /* Macro ending argument list iteration */
 	return (bytes_count);

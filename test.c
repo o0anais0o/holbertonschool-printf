@@ -45,11 +45,12 @@ void run_tests(void)
 	_printf("\n");
 
 	printf("=== Percent Sign Edge Cases ===\n");
+	_printf("%");
 	_printf("Single %%: %%\n");
 	_printf("Multiple %%%%: %%%%\n");
 	_printf("Mixed with text: 100%%\n");
 	_printf("At start: %%Hello\n");
-	_printf("At end: Hello%%\n");
+	_printf("At end: Hello%\n");
 	_printf("Alone: %%%%\n");
 	_printf("With spaces: %% %% %%\n");
 	_printf("\n");
