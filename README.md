@@ -38,8 +38,9 @@ The man page provides a detailed explanation of the function. To see the full do
 | _print_digit.c            | int _print_digit(va_list arguments);              |
 
 ## Flowchart
-https://drive.google.com/file/d/1rWe6B0hJG_QXp7sVeSX68pyd0kMAhvo5/view?usp=sharing
+<img src="![alt text](image-1.png)" alt="flowchart">
+
 
 ## Authors
-* Anaïs Choisy <https://github.com/o0anais0o
-* Valentin Dumont <https://github.com/proser-v
+* Anaïs Choisy https://github.com/o0anais0o
+* Valentin Dumont https://github.com/proser-v
