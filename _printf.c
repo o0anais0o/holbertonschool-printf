@@ -14,6 +14,8 @@
  *                  "%s"    Characters from the string argument, until
  *                          terminating null byte '\0', are written.
  *                  "%%"    Write a "%" character.
+ *                 "d" "i"  Convert the int argument to signed decimal
+ *                          notation and write it.
  *              This function do not handle the flag characters, field width,
  *              precision, or the length modifiers, and don't reproduce the
  *              buffer handling.
@@ -51,6 +53,10 @@ int _printf(const char *format, ...)
 		{
 			write(1, "%", 1); /* Write "%" */
 			bytes_count++;
+		}
+		else if (format[index] == 'd' || format[index] == 'i')
+		{
+			bytes_count += _print_digit(arguments);
 		}
 		else
 		{ /* Handeling other conversion specifier */
