@@ -32,36 +32,35 @@ int _printf(const char *format, ...)
 	int index, bytes_count = 0;
 
 	va_start(arguments, format); /* Macro initializing argument list iteration */
+	if (format == NULL)
+		exit(98);
 	for (index = 0; format[index] != '\0'; index++)
 	{								/* Going through format string */
 		if (format[index] != '%')
 		{
-			write(1, &format[index], 1); /* Write regular character */
+			_putchar(format[index]); /* Write regular character */
 			bytes_count++;
 			continue; /* Go back to the loop to check the next character */
 		}
 		index++; /* Checking the next character after "%" */
 		if (format[index] == 'c')
-		{
 			bytes_count += _print_char(arguments);
-		}
+
 		else if (format[index] == 's')
-		{
 			bytes_count += _print_string(arguments);
-		}
+
 		else if (format[index] == '%')
 		{
-			write(1, "%", 1); /* Write "%" */
+			_putchar('%'); /* Write "%" */
 			bytes_count++;
 		}
 		else if (format[index] == 'd' || format[index] == 'i')
-		{
 			bytes_count += _print_digit(arguments);
-		}
+
 		else
 		{ /* Handeling other conversion specifier */
-			write(1, "%", 1);
-			write(1, &format[index], 1);
+			_putchar('%');
+			_putchar(format[index]);
 			bytes_count += 2;
 		}
 	}

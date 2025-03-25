@@ -44,7 +44,7 @@ char *rev_string(char *number_str, int length)
 {
 	int index, index2, reverse;
 
-	for (index = 0, index2 = length; index < index2; index++, index2--)
+	for (index = 0, index2 = length - 1; index < index2; index++, index2--)
 	{
 		reverse = number_str[index];
 		number_str[index] = number_str[index2];
@@ -95,12 +95,12 @@ int _print_digit(va_list arguments)
 		index++;
 	}
 	number_str[index] = '\0'; /* Put the '\0' at the end of the string */
-	count = index - 1; /* The length of the string and bytes count */
+	count = index; /* The length of the string and bytes count */
 
 	number_str = rev_string(number_str, count); /* Reverse the string */
 
 	for (index = 0; number_str[index] != '\0'; index++) /* Print the string */
-		write(1, &number_str[index], 1);
+		_putchar(number_str[index]);
 
 	free(number_str);
 	return (count);
