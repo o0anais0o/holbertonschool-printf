@@ -10,6 +10,5 @@
  */
 int _print_percent(void)
 {
-	_putchar('%');
-	return (1);
+	return (_putchar('%'));
 }
