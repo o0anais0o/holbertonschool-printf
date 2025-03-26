@@ -27,6 +27,10 @@ _printf \- print data and format
 .BI "char *rev_string(char *" number_str ", int " length ");"
 .br
 .BI "int _print_digit(va_list " arguments ");"
+.br
+.BI "int _print_percent(void);"
+.br
+.BI "int _print_other(char " c ");"
 
 .SH DESCRIPTION
 A custom version of printf. Produce ouput refering to a format string.

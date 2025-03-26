@@ -85,6 +85,7 @@ int main(void)
 	char *str = "Hello, World!";
 	char *empty_str = "";
 	char *null_str = NULL;
+	int byte_count;
 
 	printf("==== Starting Comprehensive printf Tests ====\n");
 	printf("==== Standard Test Cases ====\n");
@@ -112,6 +113,9 @@ int main(void)
 	_printf("%s %d%% complete\n", "Progress:", 75);
 	_printf("%c%c%c%c%c\n", 'H', 'e', 'l', 'l', 'o');
 	_printf("%d %i %c %s %%\n", 100, 200, 'X', "Test");
+
+	byte_count = _printf("%s %d%% complete\n", "Progress:", 100);
+	_printf("Number of characters printed : %d\n", byte_count);
 
 	run_tests();
 
