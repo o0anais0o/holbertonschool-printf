@@ -52,7 +52,7 @@ We also used valgrind to be sure there is no memory leaks or issues :
 ```valgrind ./a.out```
 
 ## Flowchart
-![alt text](image.png)
+![alt text](Flowchart_printf.jpg)
 
 ## Authors
 * Anaïs Choisy https://github.com/o0anais0o
