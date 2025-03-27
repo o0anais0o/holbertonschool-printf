@@ -12,7 +12,7 @@
  */
 int _print_char(va_list arguments)
 {
-char character = va_arg(arguments, int);
+unsigned char character = va_arg(arguments, int);
 
 _putchar(character);
 return (1);
