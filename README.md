@@ -3,18 +3,30 @@
 ## Description
 A pedagogical exercise in recreating printf's essential mechanisms, following Holberton's project-based learning approach.
 
+## Progression
+Our printf function can handle these conversion specifiers : ```%c```, ```%s```, ```%%```, ```%d``` and ```%i```.
+
+It could be improved by :
+- Reproducing the buffer handeling of the strandard printf function,
+- Handeling the flag characters,
+- Handeling the field width,
+- Handeling the precision,
+- Handeling the length modifiers,
+- Handeling the other conversion specifiers (```%b```, ```%u```, ```%o```, ```%x,``` ```%X```, ```%p```, ```%l```, ```%h```, ...),
+- Add some custom conversion specifiers.
+
 ## Compilation Command
 ```gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c```
 
 ## Requirements
-- Editors: ```vi```, ```vim```, ```emacs```
-- Ubuntu 20.04 LTS 
-- To compile we will use ```gcc``` using the options ```-Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format```
-- Our code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl
+- Editors: ```vi```, ```vim```, ```emacs```,
+- Compile on Ubuntu 20.04 LTS,
+- To compile we will use ```gcc``` using the options ```-Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format```,
+- Our code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl,
 - No global variables, except :
     ```write```, ```malloc```, ```free```, ```va_start```, ```va_end```, ```va_copy```, ```va_arg```.
-- No more than 5 functions per file
-- All our header files should be include guarded
+- No more than 5 functions per file,
+- All our header files should be include guarded,
 - All our prototypes of all our functions will be on the ```main.h``` header file.
 
 ## Exemples
