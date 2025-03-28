@@ -12,7 +12,7 @@ It could be improved by :
 - Handeling the field width,
 - Handeling the precision,
 - Handeling the length modifiers,
-- Handeling the other conversion specifiers (```%b```, ```%u```, ```%o```, ```%x,``` ```%X```, ```%p```, ```%l```, ```%h```, ...),
+- Handeling the other conversion specifiers (```%u```, ```%o```, ```%x,``` ```%X```, ```%p```, ```%l```, ```%h```, ...),
 - Add some custom conversion specifiers.
 
 ## Compilation Command
