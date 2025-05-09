@@ -22,7 +22,7 @@ It could be improved by :
 - Editors: ```vi```, ```vim```, ```emacs```,
 - Compile on Ubuntu 20.04 LTS,
 - To compile we will use ```gcc``` using the options ```-Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format```,
-- Our code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl,
+- Our code should use the Betty style. It will be checked using ```betty-style.pl``` and ```betty-doc.pl```,
 - No global variables, except :
     ```write```, ```malloc```, ```free```, ```va_start```, ```va_end```, ```va_copy```, ```va_arg```.
 - No more than 5 functions per file,
